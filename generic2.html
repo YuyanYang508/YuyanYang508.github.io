@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Project 2</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/yuyan-yang-3b731b195/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://www.instagram.com/muyiduo123/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://github.com/YuyanYang508" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="https://www.kaggle.com/yanonymousy" class="icon brands fa-kaggle"><span class="label">kaggle</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Project 2: Diabetic Condition Forecasting</h1>
+									</header>
+
+									<span class="image main"><img src="images/diabete.jpeg" alt="width="760" height="365"" /></span>
+
+									<h2>
+										Diabetic Patient
+									</h2>
+									<p>
+										Machine Learning
+
+									</p>
+									<p>
+										This project is about regression. We have a medical data set, the input
+										variables correspond to measurements (physical, physiological, and blood related) for a given
+										patient and the target variable corresponds to the level of diabetic condition in the patient. Inside the
+										medical data set, we have three data set, x_train, x_test, and y_train. We are going to split y_train
+										data set to two part, y_train and y_test to test our output.
+									</p>
+
+									<hr class="major" />
+
+									<h2>Method I am using</h2>
+									<p>
+									 	Linear Regression <br>
+										Lasso Regression <br>
+									</p>
+									<p>
+										I tried multiple ways to complete this project. First, I tried the linear regression method
+										directly. I used the scores function to test my model accuracy, the score of the Linear regression model is only 0.130441. After that, I tried to improve our work by Lasso Regression. <br>
+
+										Lasso Regression can avoid overfitting problems. Since I am using training data to make
+										a prediction, the output may be overfitted with train data but not the real data. Using the Lasso Regression methodology adds a penalty that can solve this problem. The penalty is the absolute
+										magnitude of the coefficients. I tried both Lasso and Ridge, finding out that the score is
+										similar.
+
+									</p>
+
+									<hr class="major" />
+
+									<h2>Hyperparameter setting and tuning</h2>
+									<p>
+										For some model, such as LinearRegression and LassoLarsIC, I adjusted the
+										hyperparameter manually. <br> <br>
+										For RidgeCV, which has build-in cross validation. I import lasso_CV under sklearn.linear_model. Inside the model, I set the tolerance
+										equal to 0.1. If the updates are smaller than 0.1, the optimization code checks the dual gap for
+										optimality and continues until it is smaller than tolerance. I set cv equals to four, which means that
+										I have 4-fold. Meanwhile, I set random_state as its default value.
+
+									</p>
+
+
+									<hr class="major" />
+
+									<h2>Performance Evaluation</h2>
+									<p>
+										LassoCV has the highest prediction score. Lasso Regression's performance is better than Linear Regression by using model.score(X_test, y_test) function.
+									</p>
+
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="generic.html">Project 1: Stock</a></li>
+										<li><a href="generic2.html">Project 2: Diabets</a></li>
+										<li><a href="visualization.html"> Data Visualization Projects</a></li>
+										<li><a href="generic3.html">Extracurricular</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+
+							<!-- Section -->
+								<section>
+								<header class="major">
+									<h2>Contact Me</h2>
+								</header>
+								<p>
+									Type Here
+								</p>
+								<ul class="contact">
+									<li class="icon solid fa-envelope"><a href="#">yuyyang2023@hotmail.com</a></li>
+									<li class="icon solid fa-phone">(814) 826-9051</li>
+									<li class="icon solid fa-home">State College<br />
+										PA, USA, 16803</li>
+								</ul>
+							</section>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

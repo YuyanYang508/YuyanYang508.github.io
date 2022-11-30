@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Project 1</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/yuyan-yang-3b731b195/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://www.instagram.com/muyiduo123/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://github.com/YuyanYang508" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="https://www.kaggle.com/yanonymousy" class="icon brands fa-kaggle"><span class="label">kaggle</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Project 1: Stock Trend Prediction</h1>
+									</header>
+
+									<span class="image main"><img src="images/pic12.png" alt="width="760" height="365"" /></span>
+
+									<h2>
+										Classification Problem: To buy, or not to buy, that is the question
+									</h2>
+									<p>Quick jump to original code</p>
+									<a href = "https://colab.research.google.com/drive/1qtUB-7rcfFENlpTvb6az1QiVkK0RYwWt?usp=sharing">https://colab.research.google.com/drive/1qtUB-7rcfFENlpTvb6az1QiVkK0RYwWt?usp=sharing</a> <br><br>
+									<p>
+										Machine learning
+									</p>
+									<p>
+										This project is a real life problem to deal with stock market trading problem. The main purpose is to predict increasing or decreasing of the stock. We are using classification method in this project, if the stock increases, we set the class to 1, and if the stock decreased, we set the class to 0.To test the prediction result, we are going to use F1 score, and our testing is based on the 30% test data, we achieved F1 score over 52 percent.
+
+									</p>
+
+									<hr class="major" />
+
+									<h3>Method I am using</h3>
+									<p>
+										Preprocessing: split the original training data set into training set and testing set, with 20% of the data is training.
+									</p>
+									<p>
+										Feature engineering: <br>
+										First method I used is standarization, such as data normalization, however, the performance dropped.
+										PCA also not good for this example. There is too many features and I did not find a good way to do selection. Therefore, I tried PCA to reduce dimension. I used first three dimensions, but the performance is not good. In conclusion, In the model fitting portion, I used standard preprocessing. <br><br>
+										Algorithm: <br>
+										Logestic, F1 is not good. <br>
+										Decision tree, F1 increase but still cannot hit  50% <br>
+										XGBoost, I achieved higher score on the leader board. <br>
+										I also tried gradient boosting.<br>
+										I did not try ensemble, because I think performance difference among those model are large, so I just used XGBoost result on the leaderboard.
+
+
+									</p>
+
+									<hr class="major" />
+
+									<h3>Final Choice</h3>
+									<p>
+										I used Boost classification algorithm to solve the problem. Create a bootstrap sample based on the weights of each data. Adjust weights of data points basedon the error (misclassified increase, correct decrease) Last, combine the classifiers on the final prediction. <br>
+										I tried two XGBoost model, the first one set all parameter to a default value, the second XGBoost model I increased the complexity by increased tree level. The complex model performed better.
+									</p>
+
+
+									<hr class="major" />
+
+
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="generic.html">Project 1: Stock</a></li>
+										<li><a href="generic2.html">Project 2: Diabets</a></li>
+										<li><a href="visualization.html"> Data Visualization Projects</a></li>
+										<li><a href="generic3.html">Extracurricular</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+
+							<!-- Section -->
+								<section>
+								<header class="major">
+									<h2>Contact Me</h2>
+								</header>
+								<p>
+									Type Here
+								</p>
+								<ul class="contact">
+									<li class="icon solid fa-envelope"><a href="#">yuyyang2023@hotmail.com</a></li>
+									<li class="icon solid fa-phone">(814) 826-9051</li>
+									<li class="icon solid fa-home">State College<br />
+										PA, USA, 16803</li>
+								</ul>
+							</section>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
